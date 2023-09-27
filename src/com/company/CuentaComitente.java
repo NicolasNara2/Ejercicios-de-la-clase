@@ -33,8 +33,8 @@ public class CuentaComitente extends Cuenta {
 
     @Override
     public void depositarEfectivo(Double ingreso) {
-      if ( ingreso > 0) {this.setSaldo(this.getSaldo() - this.getSaldo() * 0.01);
-        System.out.println(getSaldo());}
+      if ( ingreso > 0) {this.setSaldo(this.getSaldo() + (ingreso - (ingreso*0.01)));
+        System.out.println("Hizo un deposito de " + ingreso + ", que tuvo una comision de " + (ingreso*0.01) + ". Su saldo actual es de: " + getSaldo());}
          else {
                 System.out.println("Ingrese un monto valido.");
             }
