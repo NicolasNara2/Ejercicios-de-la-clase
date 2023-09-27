@@ -40,6 +40,7 @@ public class CuentaCorriente extends Cuenta{
     public void depositarCheque(Cheque cheque){
 
         this.setSaldo( this.getSaldo()+ cheque.getMonto());
+        System.out.println("Ingreso un cheque de " + cheque.getMonto());
     }
 
 
