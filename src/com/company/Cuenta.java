@@ -1,27 +1,31 @@
 package com.company;
 
-public abstract class Cuenta {
+public class Cuenta implements Comparable <Cuenta> {
+    private Integer nroCuenta;
+    private Double saldo;
 
-private Cliente cliente;
-private Double saldo;
-
-
-public abstract void extraer(Double extraccion);
-
-public void depositarEfectivo(Double ingreso){
-    this.saldo += ingreso;
-};
-
-public void informarSaldo(){
-    System.out.println("saldo disponible" + saldo);
-}
-
-    public Cliente getCliente() {
-        return cliente;
+    public Cuenta(Integer nroCuenta, Double saldo) {
+        this.nroCuenta = nroCuenta;
+        this.saldo = saldo;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+    @Override
+    public int compareTo(Cuenta o) {
+        if (this.getNroCuenta().equals(o.getNroCuenta())) {
+            return 0;
+        } else if (this.getNroCuenta() > o.getNroCuenta()){
+        return 1;
+        } else { return -1;
+
+        }
+    }
+
+    public Integer getNroCuenta() {
+        return nroCuenta;
+    }
+
+    public void setNroCuenta(Integer nroCuenta) {
+        this.nroCuenta = nroCuenta;
     }
 
     public Double getSaldo() {
@@ -30,18 +34,5 @@ public void informarSaldo(){
 
     public void setSaldo(Double saldo) {
         this.saldo = saldo;
-    }
-
-    public Cuenta(Cliente cliente, Double saldo) {
-        this.cliente = cliente;
-        this.saldo = saldo;
-    }
-
-    @Override
-    public String toString() {
-        return "Cuenta{" +
-                "cliente=" + cliente +
-                ", saldo=" + saldo +
-                '}';
     }
 }
