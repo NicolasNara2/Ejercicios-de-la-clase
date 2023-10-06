@@ -1,51 +1,39 @@
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Ejercicio 1
+        // Ingreso de contenedores.
+        Map<Integer, Contenedor> listaDeContenedores = new HashMap<>();
 
-        //Variables Variables1= new Variables(20, 20.2, "veinte");
-       // System.out.println(Variables1);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el numero identificador");
+        Integer numeroIdentificadorIngresado = scanner.nextInt();
+        System.out.println("Ingrese el pais de procedencia");
+        String paisdeprocedenciaIngresado = scanner.next();
+        System.out.println("Indique si el contenedor es peligroso, escriba true si si lo es y false si no lo es");
+        Boolean peligrosoONo = scanner.nextBoolean();
 
-        // Ejercicio 2
+        //Contenedor contenedor1 = new Contenedor(1, "Argentina", false);
+       // Contenedor contenedor2 = new Contenedor(2, null, false);
 
-       // Integer numeroEntero = 2;
-      //  Double numeroConComa = 2.2;
+        listaDeContenedores.put(numeroIdentificadorIngresado, new Contenedor(numeroIdentificadorIngresado, paisdeprocedenciaIngresado, peligrosoONo));
 
-      //  Double suma = numeroEntero+numeroConComa;
-      // System.out.println(suma);
+        Iterator iterator = listaDeContenedores.values().iterator();
+        while (iterator.hasNext()) ;
+        System.out.println(iterator.next());
 
-        // Ejericicio 3
+        Integer inicial = 0;
+        for ( Contenedor cont: listaDeContenedores.values())
+        {
+        if ( cont.getPaisDeProcedencia().equals ("Desconocido") || cont.getPeligroso().equals(true)) {
+            inicial +=1;
+            System.out.println(inicial);
 
-       // Integer numeroEntero1 = 2;
-     //   Integer numeroEntero2 = 6;
-
-      //  Integer divisionMod = numeroEntero1%numeroEntero2;
-      //  System.out.println(divisionMod);
-
-        // No se si lo hice bien.
-
-        // Ejercicio 4
-
-/*Mascotas mascota1 = new Mascotas("Burro",5, "10 kilos");
-Mascotas mascota2 = new Mascotas("Garfield", 3, "1 kilo");
-Mascotas mascota3 = new Mascotas("Coraje", 4, "3 kilos");
-
-        System.out.println(mascota1);
-
-        String burro = "Burro";
-        Integer edad = 5;
-        String cantidadDeComida = "10 kilos";
-
-        System.out.println(burro + " tiene " + edad + " años y come " + cantidadDeComida + " de comida.");*/
-
-        /* Ejericicio 5 */
-
-        Scanner escrito = new Scanner(System.in);
-        System.out.println("Ingrese un escrito corto.");
-        String escrito1= escrito.next();
-
-
+        }
+        }
             }
         }
