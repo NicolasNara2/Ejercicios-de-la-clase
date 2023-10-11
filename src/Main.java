@@ -57,14 +57,14 @@ public class Main {
         Alumnos alumnos2 = new Alumnos("Sofia", 27);
         Alumnos alumnos3 = new Alumnos("Felipe", 28);
 
-        Set <Alumnos> alumnos = new HashSet<>();
-         alumnos.add(alumnos1);
-         alumnos.add(alumnos2);
-         alumnos.add(alumnos3);
+        Set<Alumnos> alumnos = new HashSet<>();
+        alumnos.add(alumnos1);
+        alumnos.add(alumnos2);
+        alumnos.add(alumnos3);
 
-         alumnos1.ponerCalificacion();
+        alumnos1.ponerCalificacion();
 
-         elegirAlumno(alumnos);
+        elegirAlumno(alumnos);
 
 
 
