@@ -1,51 +1,34 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
 
-        //Ejercicio 1
+        Paquete paquete1 = new PaqueteSimple(1,"Ushuai", "Viaje a Ushuai", 150, 0, 5, "Bus",true);
+        Paquete paquete2 = new PaqueteSimple(2,"Ushuai", "Viaje a Ushuai", 150, 0, 7, "Bus",true);
 
-        //Variables Variables1= new Variables(20, 20.2, "veinte");
-       // System.out.println(Variables1);
+        List<Paquete> paquetes = new ArrayList<>();
 
-        // Ejercicio 2
+        paquetes.add(paquete1);
+        paquetes.add(paquete2);
 
-       // Integer numeroEntero = 2;
-      //  Double numeroConComa = 2.2;
-
-      //  Double suma = numeroEntero+numeroConComa;
-      // System.out.println(suma);
-
-        // Ejericicio 3
-
-       // Integer numeroEntero1 = 2;
-     //   Integer numeroEntero2 = 6;
-
-      //  Integer divisionMod = numeroEntero1%numeroEntero2;
-      //  System.out.println(divisionMod);
-
-        // No se si lo hice bien.
-
-        // Ejercicio 4
-
-/*Mascotas mascota1 = new Mascotas("Burro",5, "10 kilos");
-Mascotas mascota2 = new Mascotas("Garfield", 3, "1 kilo");
-Mascotas mascota3 = new Mascotas("Coraje", 4, "3 kilos");
-
-        System.out.println(mascota1);
-
-        String burro = "Burro";
-        Integer edad = 5;
-        String cantidadDeComida = "10 kilos";
-
-        System.out.println(burro + " tiene " + edad + " años y come " + cantidadDeComida + " de comida.");*/
-
-        /* Ejericicio 5 */
-
-        Scanner escrito = new Scanner(System.in);
-        System.out.println("Ingrese un escrito corto.");
-        String escrito1= escrito.next();
+        for (Paquete paquete:paquetes
+             ) {
+            System.out.println(paquetes);
+        }
 
 
-            }
+
+
+        /*
+
+
+        El sistema debe permitir visualizar la información de todos los paquetes disponibles y buscarlos.
+        Debe permitirse la incorporación, la eliminación y  búsqueda de una excursión dentro de un paquete.
+        Deben poder compararse los paquetes entre sí teniendo en cuenta que un
+        paquete es mejor si tiene mayor cantidad de días y excursiones.
+*/
+
+    }
         }
