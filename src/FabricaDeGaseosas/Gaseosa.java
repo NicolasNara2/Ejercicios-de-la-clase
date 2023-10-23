@@ -5,8 +5,8 @@ public class Gaseosa {
     private Double cantidad;
     private Double precio;
 
-    public Double calcularPrecio{
-       getPrecio();
+    public Double calcularPrecio(){
+       return getPrecio();
     }
 
 
@@ -38,5 +38,14 @@ public class Gaseosa {
 
     public void setPrecio(Double precio) {
         this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "Gaseosa{" +
+                "nombre='" + nombre + '\'' +
+                ", cantidad=" + cantidad +
+                ", precio=" + precio +
+                '}';
     }
 }

@@ -3,11 +3,11 @@ package FabricaDeGaseosas.Factory;
 import FabricaDeGaseosas.Gaseosa;
 
 public class GaseosaFactory {
-    private GaseosaFactory instance;
+    private static GaseosaFactory instance;
 
     private GaseosaFactory() {
     }
-    public GaseosaFactory getInstance(){
+    public static GaseosaFactory getInstance(){
         if (instance==null){
             instance= new GaseosaFactory();
         } return instance;

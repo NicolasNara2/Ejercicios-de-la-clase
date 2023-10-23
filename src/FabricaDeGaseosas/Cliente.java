@@ -15,13 +15,18 @@ public class Cliente {
     public void setCodigo(Integer codigo) {
         this.codigo = codigo;
     }
+    public Cliente() {
+        Gaseosa gaseosa1 = (Gaseosa)GaseosaFactory.getInstance().crearGaseosa(1);
+        gaseosas.add(gaseosa1);
+    }
 
-  /*  public Cliente() {
-        Gaseosa factory = (Gaseosa)GaseosaFactory.
+    @Override
+    public String toString() {
+        return "Cliente{" +
+                "codigo=" + codigo +
+                ", gaseosas=" + gaseosas +
+                '}';
     }
 }
-    //Gaseosa factory = (Gaseosa)GaseosaFactory;
-    //EmpleadoDependencia empleadoDependencia= (EmpleadoDependencia) EmpleadoFactory.getInstance().crearEmpleado("EMP-D");
 
 
-   */
