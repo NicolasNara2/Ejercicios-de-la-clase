@@ -20,7 +20,7 @@ public class Main {
        //Error de que no quiere tomar la clase Alumno en el Main
         // List arrayDeAlumnos <Alumno> = new ArrayList<>();
 
-
+    HashSet <Alumno> array  = new HashSet<>();
 
 
             }
